@@ -1,0 +1,189 @@
+@font-face {
+  font-family: "Mooli";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mooli/v1/-F6_fjJpLyk1bbPGDm8.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+h1,
+h2,
+p {
+  font-family: "Mooli", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+body {
+  min-height: 100vh;
+  background: #212534;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em 0;
+  box-sizing: border-box;
+}
+
+.display-none {
+  display: none !important;
+}
+.display-none:after {
+  display: none !important;
+}
+
+.card--class {
+  font-size: 2em;
+  position: relative;
+  margin: 0 auto 10px;
+}
+.card--class:before {
+  content: "";
+  position: absolute;
+  height: 110px;
+  width: 110px;
+  background: url("assets/640px-VeveAyizan.svg.png") center center no-repeat;
+  background-size: contain;
+  filter: invert(1);
+  top: -105px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-filter: invert(1);
+}
+
+.card--race {
+  margin: 0 auto 15px;
+  text-transform: none;
+}
+
+.card {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 1em 2em;
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.card .card--recto,
+.card #content {
+  height: 100%;
+  width: 100%;
+}
+.card .card--recto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .card--recto img {
+  width: 100%;
+  height: auto;
+  filter: invert(1);
+  -webkit-filter: invert(1);
+}
+.card .card--recto:hover:after {
+  transition: all ease-in-out 0.5s;
+  transform: scale(0.8);
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  -o-transform: scale(0.85);
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+}
+.card #content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: end;
+}
+.card #content .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 5px auto;
+}
+.card #content .row .stat {
+  flex: 0 0 30%;
+  max-width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px #fff solid;
+  border-radius: 50%;
+  margin: auto;
+}
+.card #content .row .stat .stat-name {
+  font-size: 0.7em;
+  margin: 0;
+  border-bottom: 1px solid #fff;
+  height: 40px;
+  width: 100%;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card #content .row .stat p {
+  margin: 0;
+  font-size: 1.5em;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card--recto::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -2;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.7);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 6s linear infinite;
+  -webkit-animation: spin 6s linear infinite;
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}/*# sourceMappingURL=style.css.map */

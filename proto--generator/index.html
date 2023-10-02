@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<script src="generator.js"></script>
+		<title>Hero generator</title>
+	</head>
+	<body>
+		<main>
+			<section class="card">
+				<div class="card--recto">
+					<img src="assets/640px-VeveOgoun.svg.png" alt="image">
+				</div>
+				<div class="display-none" id="content">
+					<p class="card--class" data="roleClass"></p>
+					<p class="card--race" data="race"></p>
+					<div class="row">
+						<div class="stat">
+							<p class="stat-name">DEX</p>
+							<p data="dex"></p>
+						</div>
+						<div class="stat">
+							<p class="stat-name">FORCE</p>
+							<p data="force"></p>
+						</div>
+						<div class="stat">
+							<p class="stat-name">CONSTIT</p>
+							<p data="constit"></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="stat">
+							<p class="stat-name">INT</p>
+							<p data="int"></p>
+						</div>
+						<div class="stat">
+							<p class="stat-name">SAG</p>
+							<p data="sag"></p>
+						</div>
+						<div class="stat">
+							<p class="stat-name">CHAR</p>
+							<p data="char"></p>
+						</div>
+					</div>
+                    <div class="row">
+                        <div class="stat">
+                            <p class="stat-name">PV</p>
+                            <p data="hp"></p>
+                        </div>
+                    </div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
